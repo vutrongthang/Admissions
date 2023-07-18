@@ -6,6 +6,7 @@ package com.hxt.configs;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.hxt.formatter.UserFormatter;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -31,9 +32,9 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = {
-    "com.vtt.controllers",
-    "com.vtt.repository",
-    "com.vtt.service"
+    "com.hxt.controllers",
+    "com.hxt.repository",
+    "com.hxt.service"
 })
 public class WebApplicationContextConfig implements WebMvcConfigurer {
 
@@ -101,8 +102,8 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
         return cloudinary;
     }
 
-    @Override
+   @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addFormatter(new CategoryFormatter());
+        registry.addFormatter(new UserFormatter());
     }
 }
