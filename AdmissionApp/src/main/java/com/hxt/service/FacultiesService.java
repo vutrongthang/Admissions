@@ -4,10 +4,13 @@
  */
 package com.hxt.service;
 
+import com.hxt.pojo.Faculties;
+import java.util.List;
+
 /**
  *
  * @author vutrongthang
  */
 public interface FacultiesService {
-    
+    List<Faculties>getFacultieses();
 }

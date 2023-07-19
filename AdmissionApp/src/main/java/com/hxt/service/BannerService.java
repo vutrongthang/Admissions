@@ -4,10 +4,13 @@
  */
 package com.hxt.service;
 
+import com.hxt.pojo.Banners;
+import java.util.List;
+
 /**
  *
  * @author vutrongthang
  */
 public interface BannerService {
-    
+    List<Banners>getBannerses();
 }

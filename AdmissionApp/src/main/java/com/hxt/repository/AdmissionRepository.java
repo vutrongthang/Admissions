@@ -4,10 +4,14 @@
  */
 package com.hxt.repository;
 
+import com.hxt.pojo.AdmissionInfo;
+import java.util.List;
+
 /**
  *
  * @author vutrongthang
  */
 public interface AdmissionRepository {
-    
+        List<AdmissionInfo>getAdmissionInfos();
+
 }

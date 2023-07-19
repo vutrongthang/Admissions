@@ -4,10 +4,13 @@
  */
 package com.hxt.service;
 
+import com.hxt.pojo.AdmissionInfo;
+import java.util.List;
+
 /**
  *
  * @author vutrongthang
  */
 public interface AdmissionService {
-    
+    List<AdmissionInfo>getAdmissionInfos();
 }
