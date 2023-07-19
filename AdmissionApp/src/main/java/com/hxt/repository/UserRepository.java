@@ -5,12 +5,16 @@
 package com.hxt.repository;
 
 import com.hxt.pojo.Users;
+import java.util.List;
 
 /**
  *
  * @author vutrongthang
  */
 public interface UserRepository {
-        Users getUserByUsername(String name);
+
+    Users getUserByUsername(String name);
+
+    List<Users> getUsersByRole(String role);
 
 }
