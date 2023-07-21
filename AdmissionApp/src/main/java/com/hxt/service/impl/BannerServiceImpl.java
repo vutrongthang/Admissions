@@ -4,10 +4,26 @@
  */
 package com.hxt.service.impl;
 
+import com.hxt.pojo.Banners;
+import com.hxt.repository.BannerRepository;
+import com.hxt.service.BannerService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author vutrongthang
  */
-public class BannerServiceImpl {
-    
+@Service
+public class BannerServiceImpl implements BannerService {
+
+    @Autowired
+    BannerRepository bannerRepository;
+
+    @Override
+    public List<Banners> getBannerses() {
+        return this.bannerRepository.getBannerses();
+    }
+
 }

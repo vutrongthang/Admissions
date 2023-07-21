@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author vutrongthang
  */
+
 public interface BannerService {
     List<Banners>getBannerses();
 }
