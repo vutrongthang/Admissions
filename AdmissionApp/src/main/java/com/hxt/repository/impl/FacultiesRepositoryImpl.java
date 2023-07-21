@@ -7,6 +7,7 @@ package com.hxt.repository.impl;
 import com.hxt.pojo.Faculties;
 import com.hxt.repository.FacultiesRepository;
 import java.util.List;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Repository;
@@ -30,7 +31,10 @@ public class FacultiesRepositoryImpl implements FacultiesRepository {
 
     @Override
     public Faculties getFacultiesId(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+            Session s = sessionFactory.getObject().getCurrentSession();
+        return s.get(Faculties.class, id);
+        
     }
 
 }

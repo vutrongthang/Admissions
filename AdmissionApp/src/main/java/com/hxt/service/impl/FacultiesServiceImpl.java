@@ -4,10 +4,26 @@
  */
 package com.hxt.service.impl;
 
+import com.hxt.pojo.Faculties;
+import com.hxt.repository.FacultiesRepository;
+import com.hxt.service.FacultiesService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author vutrongthang
  */
-public class FacultiesServiceImpl {
-    
+@Service
+public class FacultiesServiceImpl implements FacultiesService {
+
+    @Autowired
+    FacultiesRepository facultiesRepository;
+
+    @Override
+    public List<Faculties> getFacultieses() {
+        return this.facultiesRepository.getFacultieses();
+    }
+
 }
