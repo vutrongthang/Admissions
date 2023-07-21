@@ -4,10 +4,13 @@
  */
 package com.hxt.handler;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author vutrongthang
  */
+@Component
 public class LoginSuccessHandler {
     
 }
