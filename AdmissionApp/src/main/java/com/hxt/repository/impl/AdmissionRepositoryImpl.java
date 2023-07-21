@@ -4,10 +4,15 @@
  */
 package com.hxt.repository.impl;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 /**
  *
  * @author vutrongthang
  */
+@Repository
+@Transactional
 public class AdmissionRepositoryImpl {
     
 }
